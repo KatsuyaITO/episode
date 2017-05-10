@@ -12,18 +12,15 @@
 % standard.sty から移動：
 \usepackage{bm}
 \usepackage[top=25truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
-\usepackage{setspace} % setspaceパッケージのインクルード
-\usepackage{wrapfig}
+\usepackage{setspace} % setspaceパッケージのインクルード\usepackage{wrapfig}
 \usepackage{multicol}
 \usepackage{ulem}
 \usepackage{url}
 \usepackage{array,arydshln}
 
-\usepackage{hyperref}
-\usepackage{pxjahyper}
+\usepackage{hyperref}\usepackage{pxjahyper}
 %\usepackage{natbib} 
 %\usepackage{standard}
-
 %プリアンブル
 \topmargin -0.5in
 \headheight 0.2in
@@ -31,8 +28,7 @@
 \evensidemargin -0.03in
 \oddsidemargin -0.4in
 %\textwidth 5.6in
-%\textheight 8.4in
-\renewcommand{\thetable}{%
+%\textheight 8.4in\renewcommand{\thetable}{%
 \arabic{table}}
 
 %圏点
@@ -81,7 +77,14 @@
 \clearpage % tocloft パッケージを使う場合は自分で \clearpage しないといけない
 \tableofcontents
 \mainmatter
-\subfile{sample}
+\subfile{gap}
+\subfile{ookuwa}
+\subfile{shirai}
+\subfile{mask}
+\subfile{ziphil}
+\subfile{momomay2017}
+\subfile{takagi}
+\subfile{yanagawa}
 % \cftaddtitleline{toc}{chapter}{圏論が分かる4コマ漫画(小林)}{章間}
 % このようにすると好きなように目次を変更できる
 \backmatter
