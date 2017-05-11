@@ -122,11 +122,12 @@ a=p^n \frac{s}{t} \quad (n\in \Z, s,t \in \Z \setminus p\Z )
 
 \begin{prop}
 $p$進付値について，次が成り立つ．($\infty$に関しての演算は直観の通り)
-\begin{description}
-	\item[(1)] $v_p(ab)=v_p(a)+v_p(b)$
-	\item[(2)] $v_p(a+b) \geqq \min(v_p(a),v_p(b))$
-	\item[(3)] $v_p(a) \neq v_p(b)$ならば，$v_p(a+b)=\min(v_p(a),v_p(b))$
-\end{description}
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\arabic{enumi})}
+\item $v_p(ab)=v_p(a)+v_p(b)$
+\item $v_p(a+b) \geqq \min(v_p(a),v_p(b))$
+\item $v_p(a) \neq v_p(b)$ならば，$v_p(a+b)=\min(v_p(a),v_p(b))$
+\end{enumerate}
 \end{prop}
 
 \begin{proof}
@@ -168,10 +169,11 @@ $a \in \Q$に対し，
 このような乗法付値には名前がついていて，\textgt{非アルキメデス付値}といいます．}
 \begin{prop}
 $p$進絶対値について，次が成り立つ．
-\begin{description}
-	\item[(1)] $\abs{ab}_p=\abs{a}_p \abs{b}_p$
-	\item[(2)] $\abs{a+b}_p \leqq \max(\abs{a}_p,\abs{b}_p)$
-\end{description}
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\arabic{enumi})}
+\item $\abs{ab}_p=\abs{a}_p \abs{b}_p$
+\item $\abs{a+b}_p \leqq \max(\abs{a}_p,\abs{b}_p)$
+\end{enumerate}
 \end{prop}
 
 \begin{proof}
@@ -195,11 +197,12 @@ d_p(a,b)=\abs{a-b}_p
 このとき次が成り立ちます．
 \begin{theo}
 $p$進距離について，距離の公理が成り立つ．
-\begin{description}
-	\item[(1)] $d_p(a,b) \geqq	0$であり，$d_p(a,b)=0 \Longleftrightarrow a=b$ 
-	\item[(2)] $d_p(a,b)=d_p(b,a)$ 
-	\item[(3)] $d_p(a,c) \leqq d_p(a,b) +d_p(b,c)$
-\end{description}
+\begin{enumerate}
+  \renewcommand{\labelenumi}{(\arabic{enumi})}
+\item $d_p(a,b) \geqq	0$であり，$d_p(a,b)=0 \Longleftrightarrow a=b$ 
+\item $d_p(a,b)=d_p(b,a)$ 
+\item $d_p(a,c) \leqq d_p(a,b) +d_p(b,c)$
+\end{enumerate}
 \end{theo}
 
 \begin{proof}
