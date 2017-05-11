@@ -2,11 +2,12 @@
 
 
 % ここにnewtheorem,newenvironment,defなどを書く
-\newtheorem{theo}{定理}
-\newtheorem{defi}{定義}
-\newtheorem{rem}{注意}
 
 \begin{document} %ここから文章を始める
+
+%\newtheorem{theo}{定理}
+\newtheorem{maskdefi}{定義}
+\newtheorem{rem}{注意}
 
 \Chapter{四次元立方体の描き方(マスク)} 
 % 章だてはSection,Subsection,Subsubsectionで行う
@@ -58,7 +59,7 @@
 
 また，この章は大学一年生レベルの線型代数の知識を前提としています．
 
-\defi [$n$次元立方体]
+\maskdefi [$n$次元立方体]
 
 $\mathbb{R}^n$ の部分集合 $M$ が，以下の条件を満たすとき，$M$を$n$次元立方体と呼ぶ．
 
@@ -75,17 +76,17 @@ $\mathbb{R}^n$ の部分集合 $M$ が，以下の条件を満たすとき，$M$
 \rem
 上の理由で，今後は$n$次元立方体は全て$[0,1]^n$として考えることにする．
 
-\defi [頂点]
+\maskdefi [頂点]
 
 集合$\{0,1\} ^n \subset \mathbb{R}^n$の元を$n$次元立方体の{\gt 頂点}と呼ぶ．
 
-\defi[辺]
+\maskdefi[辺]
 $n$次元立方体の異なる二つの頂点を結んだ線分のうち，長さが$1$になる線分のことを，$n$次元立方体の{\gt 辺}と呼ぶ．
 
 \rem
 上の頂点，辺の定義は$n$次元立方体に特化した定義であり，一般の$n$次元の立体に適応できるものではない．今回は，これを紙面に図示するという観点から，イメージしやすいようにこの定義を採用している．
 
-\defi [$n$次元立方体を描く]
+\maskdefi [$n$次元立方体を描く]
 
 $n$次元立方体を描くとは，次の操作のことを指す．
 

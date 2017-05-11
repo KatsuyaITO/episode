@@ -1,17 +1,17 @@
 \documentclass[. /main]{subfiles}
 %\documentclass{jsarticle}
 
-\usepackage{amsmath,  amssymb}
-\usepackage{amsthm}
-\usepackage[all]{xy}
-
-\theoremstyle{definition}
-\newtheorem{theo}{Theorem}
-\newtheorem{defi}[theo]{Definition}
-\newtheorem{prop}[theo]{Proposition}
-\newtheorem{lemm}[theo]{Lemma}
+%\usepackage{amsmath,  amssymb}
+%\usepackage{amsthm}
+%\usepackage[all]{xy}
 
 \begin{document}
+
+\theoremstyle{definition}
+\newtheorem{momotheo}{Theorem}
+\newtheorem{momodefi}[momotheo]{Definition}
+\newtheorem{momoprop}[momotheo]{Proposition}
+\newtheorem{lemm}[momotheo]{Lemma}
 
 \Chapter{$\mathcal{S}et$にはちょうど9つしかモデル構造が入らない話(小林)}
 
@@ -49,7 +49,7 @@ Tom Goodwillie \end{flushright}
 
 \Section{諸定義: lifting propertyとWFSとモデル圏}
 以下の定義はすべて[Riehl]におよそ準拠しています(言葉を少なくするために多少の同値な言いかえを含みます). また基本的な圏論は行こう仮定します.
-\begin{defi}[Lifting Property]
+\begin{momodefi}[Lifting Property]
 圏$\mathcal{C}$の射 $\pi \colon A \to B$, $\rho \colon X \to Y$の間の{\it lifting problem}とは以下の図の実線部分からなるような可換図式のことである. これに対し, 点線で記されたような射が全体を可換にするように伸びるとき, この射をこのlifting problemの解と言う. $\pi$と$\rho$の間のすべてのlifting problemに対して解が存在するとき, $\pi$は$\rho$に関して{\it left lifting property} (以下LLP)を持つと言い, また$\rho$は$\pi$に関して{\it right lifting property} (以下RLP)を持つと言う. 記号では$\pi \perp \rho$とここでは表すことにする. (注意:そもそも$\pi$と$\rho$の間にlifting problemが存在しないような場合も例外なく$\pi \perp \rho$と書く. )
 \begin{center}
 $\xymatrix{
@@ -57,9 +57,9 @@ A \ar[d]_{\pi} \ar[r] \ar@{}[dr] & X \ar[d]^{\rho} \\
 B \ar@{-->}[ru] \ar[r] & Y \\
 }$
 \end{center}
-\end{defi}
+\end{momodefi}
 
-\begin{defi}[Weak Factorization System]
+\begin{momodefi}[Weak Factorization System]
 圏$\mathcal{C}$の射のクラスの組$(\mathcal{L},  \mathcal{R})$が以下の3つの条件を満たすとき, {\it weak factorization system} (以下WFS)であると言う. 
 \begin{itemize}
 \item[(a)] 任意の$\mathcal{C}$の射$f$に対して, ある$g \in \mathcal{L}$と$h \in \mathcal{R}$が存在して, $f = h \circ g$を満たす.
@@ -70,9 +70,9 @@ B \ar@{-->}[ru] \ar[r] & Y \\
 \item[(b)] $\mathcal{L} = {}^{\perp}\mathcal{R}$かつ$\mathcal{R
 } = {\mathcal{L}}^{\perp}$を満たす. ただし, 射のクラス$\mathcal{A}$に対して, ${}^{\perp}\mathcal{A}$とは$\mathcal{A}$のすべての要素に対してLLPを持つ射全体のクラスで, ${\mathcal{A}}^{\perp}$とは$\mathcal{A}$のすべての要素に対してRLPを持つ射全体のクラスのことである. 
 \end{itemize}
-\end{defi}
+\end{momodefi}
 
-\begin{defi}[モデル圏]
+\begin{momodefi}[モデル圏]
 圏$\mathcal{C}$の{\it model structure} とは, wideな(すべての対象を含む)部分圏$\mathcal{W}$と射のクラス$\mathcal{C}$と$\mathcal{F}$であって, 以下の条件をみたすもののことを言う. 
 \begin{itemize}
 \item[(1)] $\mathcal{W}$は2-of-3 propertyを満たす. すなわち, $f,  g,  g \circ f \in \mathcal{C}$のうち2つが$\mathcal{W}$に含まれているとき, もう1つも$\mathcal{W}$に含まれる. 
@@ -88,7 +88,7 @@ $\mathcal{C}$に含まれる射を{\it cofibration}と言う.
 $\mathcal{F}$に含まれる射を{\it fibration}と言う. 
 
 (注:モデル圏の定義にはいろいろなvariantがある. )
-\end{defi}
+\end{momodefi}
 
 \Section{$\mathcal{S}et$にはモデル構造がちょうど9つしか入らないこと}
 以下実際に証明していくので, せっかく圏論的なセッティングをしましたが, これからは対象とは集合であり, 射とは写像です. なので, 素朴な集合と写像の概念が分かっていれば, 読めると思います. 
@@ -123,12 +123,12 @@ $\pi$と$\rho$のどちらか一方が単射かつ, $\pi$と$\rho$のどちら�
 逆も少し考えれば分かり, 例えば雰囲気を言うと${\pi}^{-1}(b)$が2点以上になる$b \in B$, ${\rho}^{-1}(y)$が2点以上になる$y \in Y$があったとすると, $b$を$y$に移すような写像を$f$にとって, $g$ではそのファイバーの点が分かれるような写像を取れば解が存在しないlifting problemが作れる. しっかりした証明をするにはこのような感じで注意深く場合分けしていけばよい. 
 \end{proof}
 
-\begin{prop}
+\begin{momoprop}
 $\mathcal{S}et$にはWFSが6つしか存在しない:\\
 具体的には, $\mathcal{A}:$すべての射の成すクラス, $\mathcal{E}:$すべての全射の成すクラス, $\mathcal{I}:$すべての全単射の成すクラス, $\mathcal{M}:$すべての単射の成すクラス, $\mathcal{N}:$始域が$\emptyset$で終域が非空な写像全体の成すクラスとして, 
 \begin{center} $(\mathcal{A},  \mathcal{I}),  (\mathcal{A} \setminus \mathcal{N},  \mathcal{I} \cup \mathcal{N}),  (\mathcal{M},  \mathcal{E}),  (\mathcal{E},  \mathcal{M}),  (\mathcal{M} \setminus \mathcal{N},  \mathcal{E} \cup \mathcal{N}),  (\mathcal{I},  \mathcal{A})$.
 \end{center}
-\end{prop}
+\end{momoprop}
 \begin{proof}
 まず$\pi \colon A \to B$に対して, $({{}^{\perp}(\{\pi\}}^{\perp}),  {\{\pi\}}^{\perp})$を考える. これは構成から明らかにWFSの条件のうち(b)(c)を満たしている. Lemma 5.より${\{\pi\}}^{\perp}$としてあり得るのは以下の5通り:
 \begin{itemize}
@@ -158,9 +158,9 @@ $\mathcal{S}et$にはWFSが6つしか存在しない:\\
 以上の議論より6つの候補$(\mathcal{I},  \mathcal{A}),  (\mathcal{M},  \mathcal{E}),  (\mathcal{M} \setminus \mathcal{N},  \mathcal{E} \cup \mathcal{N}),  (\mathcal{E},  \mathcal{M}),  (\mathcal{A} \setminus \mathcal{N},  \mathcal{I} \cup \mathcal{N}),  (\mathcal{A},  \mathcal{I})$が出てきたが, これらはいずれもWFSの条件の(a)を満たすことが確認できる. 
 \end{proof}
 
-\begin{theo}
+\begin{momotheo}
 集合の成す圏$\mathcal{S}et$に入るmodel structureはちょうど9つである. 
-\end{theo}
+\end{momotheo}
 \begin{proof}
 モデル圏は$(\mathcal{C} \cap \mathcal{W},  \mathcal{F})$と$(\mathcal{C},  \mathcal{F} \cap \mathcal{W})$の2つのWFSを持つわけであるが, $\mathcal{F}$と$\mathcal{F} \cap \mathcal{W}$の包含関係で場合分けして考える. 
 

@@ -8,6 +8,9 @@
 \usepackage{aliascnt}
 \usepackage{ascmac}
 \usepackage{subfiles}
+\usepackage{here} % ookuwa.tex
+\usepackage{prftree} % ziphil.tex
+\usepackage[all]{xy} % momomay2017.tex
 
 % standard.sty から移動：
 \usepackage{bm}
@@ -29,7 +32,7 @@
 \oddsidemargin -0.4in
 %\textwidth 5.6in
 %\textheight 8.4in\renewcommand{\thetable}{%
-\arabic{table}}
+%\arabic{table}}
 
 %圏点
 \makeatletter
@@ -77,14 +80,14 @@
 \clearpage % tocloft パッケージを使う場合は自分で \clearpage しないといけない
 \tableofcontents
 \mainmatter
-\subfile{gap}
-\subfile{ookuwa}
-\subfile{shirai}
-\subfile{mask}
-\subfile{ziphil}
-\subfile{momomay2017}
-\subfile{takagi}
-\subfile{yanagawa}
+{\subfile{gap}}
+{\subfile{ookuwa}}
+{\subfile{shirai}}
+{\subfile{mask}}
+{\subfile{ziphil}}
+{\subfile{momomay2017}}
+{\subfile{takagi}}
+{\subfile{yanagawa}}
 % \cftaddtitleline{toc}{chapter}{圏論が分かる4コマ漫画(小林)}{章間}
 % このようにすると好きなように目次を変更できる
 \backmatter
